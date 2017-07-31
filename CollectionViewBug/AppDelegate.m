@@ -15,8 +15,19 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *appleClubLayoutFilename = @"layout";
+    NSString *appleClubLayoutDocumentsPath = [documentsDirectory stringByAppendingPathComponent:appleClubLayoutFilename];
+    
+    if ([fileManager fileExistsAtPath:appleClubLayoutDocumentsPath] == NO) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:appleClubLayoutFilename ofType:@""];
+        [fileManager copyItemAtPath:path toPath:appleClubLayoutDocumentsPath error:&error];
+    }
     return YES;
 }
 

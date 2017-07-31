@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +20,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lKt-PX-751">
+                                <rect key="frame" x="0.0" y="20" width="375" height="347"/>
+                                <color key="backgroundColor" red="0.058823529411764705" green="0.058823529411764705" blue="0.058823529411764705" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="dqS-pR-J0Y"/>
+                                </constraints>
+                                <collectionViewLayout key="collectionViewLayout" id="GbH-vo-nRT" customClass="GridCollectionViewLayout"/>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="P1T-3L-9Jy"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="p0r-Gv-qkY"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQd-fw-6yf">
+                                <rect key="frame" x="20" y="387" width="88" height="30"/>
+                                <state key="normal" title="Remove Row"/>
+                                <connections>
+                                    <action selector="touchUpInsideRemoveRowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="udU-u1-SVC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reF-FA-rjd">
+                                <rect key="frame" x="149.5" y="387" width="76" height="30"/>
+                                <state key="normal" title="remove col"/>
+                                <connections>
+                                    <action selector="touchUpInsideRemoveColumnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="70s-rD-JIt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PQd-fw-6yf" firstAttribute="top" secondItem="lKt-PX-751" secondAttribute="bottom" constant="20" id="3h5-rs-ULq"/>
+                            <constraint firstItem="lKt-PX-751" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8ac-7D-WOp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lKt-PX-751" secondAttribute="bottom" constant="300" id="9f8-jn-heH"/>
+                            <constraint firstItem="PQd-fw-6yf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="FkV-7k-5qj"/>
+                            <constraint firstItem="reF-FA-rjd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OE2-dv-1s7"/>
+                            <constraint firstItem="lKt-PX-751" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SLz-8F-Jlp"/>
+                            <constraint firstItem="reF-FA-rjd" firstAttribute="centerY" secondItem="PQd-fw-6yf" secondAttribute="centerY" id="as7-CH-Aic"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activeCollectionView" destination="lKt-PX-751" id="WLd-sC-omY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

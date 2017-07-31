@@ -13,6 +13,11 @@
 		3E93DCA01F2F29E900A4E2DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E93DC9E1F2F29E900A4E2DD /* Main.storyboard */; };
 		3E93DCA21F2F29E900A4E2DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E93DCA11F2F29E900A4E2DD /* Assets.xcassets */; };
 		3E93DCA51F2F29E900A4E2DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E93DCA31F2F29E900A4E2DD /* LaunchScreen.storyboard */; };
+		3E93DCAF1F2F2B3800A4E2DD /* VenueLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E93DCAE1F2F2B3800A4E2DD /* VenueLayoutCell.m */; };
+		3E93DCB31F2F2B8000A4E2DD /* VenueLayoutCellObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E93DCB21F2F2B8000A4E2DD /* VenueLayoutCellObject.m */; };
+		3E93DCB61F2F31BB00A4E2DD /* GridCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E93DCB51F2F31BB00A4E2DD /* GridCollectionViewLayout.m */; };
+		3E93DCBD1F2F329100A4E2DD /* VenueLayoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E93DCBB1F2F329100A4E2DD /* VenueLayoutCell.xib */; };
+		3E93DCBF1F2F37E700A4E2DD /* layout in Resources */ = {isa = PBXBuildFile; fileRef = 3E93DCBE1F2F37E700A4E2DD /* layout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,14 @@
 		3E93DCA11F2F29E900A4E2DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E93DCA41F2F29E900A4E2DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E93DCA61F2F29E900A4E2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E93DCAD1F2F2B3800A4E2DD /* VenueLayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueLayoutCell.h; sourceTree = "<group>"; };
+		3E93DCAE1F2F2B3800A4E2DD /* VenueLayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueLayoutCell.m; sourceTree = "<group>"; };
+		3E93DCB11F2F2B8000A4E2DD /* VenueLayoutCellObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueLayoutCellObject.h; sourceTree = "<group>"; };
+		3E93DCB21F2F2B8000A4E2DD /* VenueLayoutCellObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueLayoutCellObject.m; sourceTree = "<group>"; };
+		3E93DCB41F2F31BB00A4E2DD /* GridCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridCollectionViewLayout.h; sourceTree = "<group>"; };
+		3E93DCB51F2F31BB00A4E2DD /* GridCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridCollectionViewLayout.m; sourceTree = "<group>"; };
+		3E93DCBB1F2F329100A4E2DD /* VenueLayoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueLayoutCell.xib; sourceTree = "<group>"; };
+		3E93DCBE1F2F37E700A4E2DD /* layout */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = layout; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +71,15 @@
 		3E93DC941F2F29E900A4E2DD /* CollectionViewBug */ = {
 			isa = PBXGroup;
 			children = (
+				3E93DCBE1F2F37E700A4E2DD /* layout */,
+				3E93DCB01F2F2B5E00A4E2DD /* Objects */,
+				3E93DCAC1F2F2AE200A4E2DD /* Cells */,
 				3E93DC981F2F29E900A4E2DD /* AppDelegate.h */,
 				3E93DC991F2F29E900A4E2DD /* AppDelegate.m */,
 				3E93DC9B1F2F29E900A4E2DD /* ViewController.h */,
 				3E93DC9C1F2F29E900A4E2DD /* ViewController.m */,
+				3E93DCB41F2F31BB00A4E2DD /* GridCollectionViewLayout.h */,
+				3E93DCB51F2F31BB00A4E2DD /* GridCollectionViewLayout.m */,
 				3E93DC9E1F2F29E900A4E2DD /* Main.storyboard */,
 				3E93DCA11F2F29E900A4E2DD /* Assets.xcassets */,
 				3E93DCA31F2F29E900A4E2DD /* LaunchScreen.storyboard */,
@@ -77,6 +95,25 @@
 				3E93DC961F2F29E900A4E2DD /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E93DCAC1F2F2AE200A4E2DD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3E93DCAD1F2F2B3800A4E2DD /* VenueLayoutCell.h */,
+				3E93DCAE1F2F2B3800A4E2DD /* VenueLayoutCell.m */,
+				3E93DCBB1F2F329100A4E2DD /* VenueLayoutCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		3E93DCB01F2F2B5E00A4E2DD /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				3E93DCB11F2F2B8000A4E2DD /* VenueLayoutCellObject.h */,
+				3E93DCB21F2F2B8000A4E2DD /* VenueLayoutCellObject.m */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +174,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E93DCBF1F2F37E700A4E2DD /* layout in Resources */,
 				3E93DCA51F2F29E900A4E2DD /* LaunchScreen.storyboard in Resources */,
 				3E93DCA21F2F29E900A4E2DD /* Assets.xcassets in Resources */,
+				3E93DCBD1F2F329100A4E2DD /* VenueLayoutCell.xib in Resources */,
 				3E93DCA01F2F29E900A4E2DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,7 +190,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E93DC9D1F2F29E900A4E2DD /* ViewController.m in Sources */,
+				3E93DCAF1F2F2B3800A4E2DD /* VenueLayoutCell.m in Sources */,
+				3E93DCB31F2F2B8000A4E2DD /* VenueLayoutCellObject.m in Sources */,
 				3E93DC9A1F2F29E900A4E2DD /* AppDelegate.m in Sources */,
+				3E93DCB61F2F31BB00A4E2DD /* GridCollectionViewLayout.m in Sources */,
 				3E93DC971F2F29E900A4E2DD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = CollectionViewBug/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ul.artemz.CollectionViewBug;
@@ -283,6 +326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = CollectionViewBug/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ul.artemz.CollectionViewBug;
